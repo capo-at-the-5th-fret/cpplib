@@ -13,8 +13,12 @@ if(CMAKE_CURRENT_SOURCE_DIR STREQUAL CMAKE_SOURCE_DIR)
     set(CPPLIB_TOP_PROJECT ON)
 endif()
 
+message("CPPLIB_TOP_PROJECT is ${CPPLIB_TOP_PROJECT}.")
+
 # project options
 option(CPPLIB_BUILD_TESTS "Build cpp lib tests" ${CPPLIB_TOP_PROJECT})
+
+message("CPPLIB_BUILD_TESTS is ${CPPLIB_BUILD_TESTS}.")
 
 # the main library
 add_subdirectory(src)
@@ -28,6 +32,9 @@ endif()
 
 # header only install
 option(CPPLIB_INSTALL ${CPPLIB_TOP_PROJECT})
+
+message("CPPLIB_INSTALL is ${CPPLIB_INSTALL}.")
+
 if (CPPLIB_INSTALL)
     include(GNUInstallDirs)
 
