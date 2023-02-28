@@ -1,7 +1,7 @@
 #include <iostream>
 #include <concepts>
 
-namespace cpp_lib
+namespace cpplib
 {
     constexpr bool is_even(std::integral auto t)
     {

@@ -4,7 +4,7 @@
 #include <string_view>
 #include <functional>
 
-namespace cpp_lib
+namespace cpplib
 {
     struct string_hash
     {

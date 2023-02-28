@@ -1,6 +1,6 @@
 //#include <catch2/catch_all.hpp>
 #include <doctest/doctest.h>
-#include "cpp_lib/cmath.h"
+#include "cpplib/cmath.h"
 
 namespace {
 
@@ -9,7 +9,7 @@ namespace {
 
 TEST_CASE_TEMPLATE_DEFINE("is_even", T, is_even_test_id)
 {
-    using cpp_lib::is_even;
+    using cpplib::is_even;
     
     CHECK(is_even(T{0}));
     CHECK_FALSE(is_even(T{1}));
@@ -30,7 +30,7 @@ TEST_CASE_TEMPLATE_APPLY(is_even_test_id, int_test_types);
 
 TEST_CASE_TEMPLATE_DEFINE("is_odd", T, is_odd_test_id)
 {
-    using cpp_lib::is_odd;
+    using cpplib::is_odd;
     
     CHECK_FALSE(is_odd(T{0}));
     CHECK(is_odd(T{1}));

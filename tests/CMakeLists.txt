@@ -41,7 +41,7 @@ add_executable(testrunner
 target_include_directories(testrunner PRIVATE "${CMAKE_CURRENT_DIR}/")
 target_link_libraries(testrunner
   PRIVATE
-  cpp_lib
+  cpplib
   doctest::doctest
 )
 

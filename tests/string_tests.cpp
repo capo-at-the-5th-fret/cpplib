@@ -3,7 +3,7 @@
 #include <string>
 #include <string_view>
 #include <unordered_map>
-#include "cpp_lib/string.h"
+#include "cpplib/string.h"
 
 TEST_CASE("string_hash")
 {
@@ -13,7 +13,7 @@ TEST_CASE("string_hash")
     using namespace std::string_view_literals;
 
     unordered_map<string, size_t,
-        cpp_lib::string_hash, std::equal_to<>> map{{"one"s, 1}};
+        cpplib::string_hash, std::equal_to<>> map{{"one"s, 1}};
     
     CHECK(map.find("one") != map.end());
     CHECK(map.find("one"s) != map.end());
