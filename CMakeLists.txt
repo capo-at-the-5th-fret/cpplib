@@ -8,10 +8,12 @@ project(cpplib
 
 # Determine if this project is built as a subproject (using add_subdirectory)
 # or if it is the top project.
-set(CPPLIB_TOP_PROJECT OFF)
-if(CMAKE_CURRENT_SOURCE_DIR STREQUAL CMAKE_SOURCE_DIR)
-    set(CPPLIB_TOP_PROJECT ON)
-endif()
+if (NOT DEFINED CPPLIB_TOP_PROJECT)
+    set(CPPLIB_TOP_PROJECT OFF)
+    if (CMAKE_CURRENT_SOURCE_DIR STREQUAL CMAKE_SOURCE_DIR)
+        set(CPPLIB_TOP_PROJECT ON)
+    endif ()
+endif ()
 
 message("CPPLIB_TOP_PROJECT is ${CPPLIB_TOP_PROJECT}.")
 
