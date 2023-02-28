@@ -44,9 +44,5 @@ if (CPPLIB_INSTALL)
         DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/cpplib
         FILES_MATCHING PATTERN "*.h"
     )
-    install(
-        DIRECTORY ${CMAKE_CURRENT_LIST_DIR}/external/cpplib/
-        DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/cpplib
-    )
 
 endif()
